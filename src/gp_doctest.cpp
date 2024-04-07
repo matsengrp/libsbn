@@ -1898,7 +1898,7 @@ bool TestTPEngineScoresAndPVs(const std::string& fasta_path,
   tpengine.SetChoiceMapByTakingFirst(tree_collection, edge_indexer);
   const auto tree_source = tpengine.GetTreeSource();
   // Populate tree vector.
-  for (const auto tree : tree_collection) {
+  for (const auto& tree : tree_collection) {
     tree_vector.push_back(tree);
   }
   for (EdgeId edge_id = 0; edge_id < dag.EdgeCountWithLeafSubsplits(); edge_id++) {
@@ -2137,7 +2137,7 @@ TEST_CASE("Top-Pruning: Likelihoods with Proposed NNIs") {
     auto tree_collection = inst.GenerateCompleteRootedTreeCollection();
     const auto tree_source = tpengine.GetTreeSource();
     // Populate tree vector and edge map.
-    for (const auto tree : tree_collection) {
+    for (const auto& tree : tree_collection) {
       tree_vector.push_back(tree);
     }
     for (EdgeId edge_id = 0; edge_id < dag.EdgeCountWithLeafSubsplits(); edge_id++) {

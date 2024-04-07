@@ -570,7 +570,7 @@ std::string Node::NodeIdAndLeavesToString() const {
   os << "{ id: " << Id();
   os << ", leaves: " << Leaves();
   SizeVector child_ids;
-  for (const auto child : children_) {
+  for (const auto& child : children_) {
     child_ids.push_back(child.get()->Id());
   }
   os << ", children: " << child_ids << " }";

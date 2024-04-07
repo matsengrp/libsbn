@@ -1085,7 +1085,7 @@ bool SubsplitDAG::ContainsTopology(const Node::NodePtr topology,
       }
       const auto parent_subsplit =
           Bitset::Subsplit(child_nodes[0]->Leaves(), child_nodes[1]->Leaves());
-      for (const auto child_node : child_nodes) {
+      for (const auto &child_node : child_nodes) {
         const auto grandchild_nodes = child_node->Children();
         const auto child_subsplit =
             (child_node->IsLeaf())
