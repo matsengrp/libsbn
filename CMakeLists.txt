@@ -32,7 +32,7 @@ ExternalProject_Add(beagle-lib
 
 ExternalProject_Add(pybind11
   GIT_REPOSITORY https://github.com/pybind/pybind11.git
-  GIT_TAG origin/v2.7
+  GIT_TAG origin/v2.3
   GIT_SHALLOW true
   GIT_PROGRESS true
   UPDATE_DISCONNECTED true
