@@ -1,6 +1,8 @@
 name: bito
 channels:
   - conda-forge
+
+# build dependencies
 dependencies:
   - python >= 3.7
   - bison >= 3.4
@@ -11,6 +13,7 @@ dependencies:
   - pip
   - pybind11 >= 2.7.0
   - pytest
+# developer dependencies
   - sphinx >= 2.2.1
   - pip:
       - black
