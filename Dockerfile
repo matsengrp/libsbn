@@ -30,7 +30,7 @@ RUN apt-get update && \
 RUN python3 -m venv /venv
 RUN source /venv/bin/activate
 RUN pip3 install numpy pandas
-RUN echo "source /venv/bin/activate" >> ~/.bash
+RUN echo "source /venv/bin/activate" >> ~/.bashrc
 
 # install conda and build bito environment
 # RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && \
